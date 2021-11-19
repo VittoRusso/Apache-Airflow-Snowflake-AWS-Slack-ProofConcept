@@ -20,15 +20,15 @@ Thinking for future steps a typical snowflake data architecture was used a 3 sch
 
 The 9 CSV files are mounted in an S3 bucket in AWS, each in a subfolder where it will be possible to add future files to be extracted en masse. The 3 data schemas of INGESTION, CURATION and CALCULATION are created. In turn, an external S3 stage and a file format in snowflake is created to read the CSV files from S3.
 
-<img src="/Pictures/Pic2.png" height="400" alt="Screenshot"/> 
+<img src="/Pictures/Pic2.png" height="200" alt="Screenshot"/> 
 
-<img src="/Pictures/Pic3.png" height="400" alt="Screenshot"/> 
+<img src="/Pictures/Pic3.png" height="150" alt="Screenshot"/> 
 
 Using the snowflake compute warehouse and the COPY INTO function it is possible to read from the INGESTION schema to the table of that data in CURATION with the following query.
 
-<img src="/Pictures/Pic4.png" height="400" alt="Screenshot"/> 
+<img src="/Pictures/Pic4.png" height="150" alt="Screenshot"/> 
 
-<img src="/Pictures/Pic4_1.jpg" height="400" alt="Screenshot"/> 
+<img src="/Pictures/Pic4_1.jpg" height="150" alt="Screenshot"/> 
 
 The first transformation task was to join with JOINS two main tables of event and group to create a table ready to create a dashboard for business intelligence with relevant data and combined in a single table.
 

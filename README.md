@@ -34,7 +34,8 @@ The first transformation task was to join with JOINS two main tables of event an
 
 For the second task, the purpose was to create a streamline of any modified data into the main destination table with millions of rows, this is so that we dont need to reupload huge files in GB but instead, only the data that changed. 
 
-The second made use of a MERGE and STREAM function from Snowflake. The combination of these two functions has the ability to listen to a source table, take only the newly inserted, updated or deleted data and perform their respective insertion into a target table. This capability has the potential to simplify updates of tables with millions of records. For this exercise the MEMBERS table containing millions of records was used to demonstrate the simplified capability of keeping this table up to date.
+The second made use of a MERGE and STREAM function from Snowflake. The combination of these two functions has the ability to listen to a source table, take only the newly inserted, updated or deleted data and perform their respective insertion into a target table. 
+This capability has the potential to simplify updates of tables with millions of records. For this exercise the MEMBERS table containing millions of records was used to demonstrate the simplified capability of keeping this table up to date.
 
 For the query to create the table of the first transofrmation, a WHERE clause was used to eliminate events that did not have at least one attendance accepted.
 
